@@ -1,0 +1,68 @@
+# CodeBook for Getting and Cleaning Data Project  
+
+## **Dataset Description**  
+The dataset used in this project comes from the accelerometers of the Samsung Galaxy S smartphone. It contains data collected from 30 volunteers performing six activities while wearing a smartphone on their waist.
+
+**Original Data Source:**  
+- [UCI Machine Learning Repository: Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)  
+
+---
+
+## **Data Collection Process**  
+1. The data was downloaded and extracted from the given URL.
+2. The training and test datasets were loaded into R.
+3. The subject, activity, and feature datasets were merged into one dataset.
+4. Measurements on the mean and standard deviation were extracted.
+5. Activity labels were replaced with descriptive names.
+6. Variable names were updated to be more descriptive.
+7. A second tidy dataset was created with the average of each variable for each subject and activity.
+
+---
+
+## **Variables in `tidy_data.txt`**  
+Each row represents a **subject** performing a specific **activity**, with the average of each measurement.
+
+### **Identifiers:**
+- `subject` - The ID of the participant (1 to 30)
+- `activity` - The name of the performed activity
+
+### **Extracted Measurements (Mean & Standard Deviation Only):**
+- `TimeBodyAccelerometer-mean-X`
+- `TimeBodyAccelerometer-mean-Y`
+- `TimeBodyAccelerometer-mean-Z`
+- `TimeBodyAccelerometer-std-X`
+- `TimeBodyAccelerometer-std-Y`
+- `TimeBodyAccelerometer-std-Z`
+- `TimeGravityAccelerometer-mean-X`
+- `TimeGravityAccelerometer-mean-Y`
+- `TimeGravityAccelerometer-mean-Z`
+- ... (Other mean and std measurements from accelerometers & gyroscopes)
+
+> The full dataset contains **66** measurement columns, focusing only on **mean** and **standard deviation** values.
+
+---
+
+## **Transformations & Processing**
+- **Merged** training (`X_train.txt`) and test (`X_test.txt`) datasets.
+- **Extracted** only mean and standard deviation columns using `grep()`.
+- **Used descriptive activity names** from `activity_labels.txt`.
+- **Renamed variables** to be more human-readable:
+  - `tBodyAcc-mean()-X` → `TimeBodyAccelerometer-mean-X`
+  - `fBodyGyro-std()-Y` → `FrequencyBodyGyroscope-std-Y`
+  - `tGravityAcc-std()-Z` → `TimeGravityAccelerometer-std-Z`
+- **Grouped data** by `subject` and `activity`, then calculated the **average** of each measurement.
+
+---
+
+## **Final Output (`tidy_data.txt`)**
+- The dataset is stored as a **text file** with **180 rows** and **68 columns** (1 subject column, 1 activity column, 66 measurements).
+- The values are **averages of the mean and standard deviation measurements** per subject and activity.
+
+---
+
+## **How to Use the Data**
+To read `tidy_data.txt` in R:
+
+```r
+tidy_data <- read.table("tidy_data.txt", header = TRUE)
+View(tidy_data)
