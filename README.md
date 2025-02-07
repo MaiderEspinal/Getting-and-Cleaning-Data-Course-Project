@@ -1,9 +1,4 @@
 # Getting-and-Cleaning-Data-Course-Project
-### **README.md**
-```md
-# Getting and Cleaning Data - Course Project  
-
-## **Project Overview**  
 This project processes data collected from the accelerometers of the Samsung Galaxy S smartphone. The goal is to clean and organize the data into a **tidy dataset** that can be used for further analysis.
 
 The **raw data** comes from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
