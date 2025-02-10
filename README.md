@@ -20,7 +20,7 @@ This repository contains the following files:
 1. Download the dataset from [this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).  
 2. Unzip the file into your working directory.  
 
-### **2. Run `run_analysis.R`**  
+### **2. Run run_analysis.R**  
 To generate `tidy_data.txt`, execute the script in R:
 
 ```r
