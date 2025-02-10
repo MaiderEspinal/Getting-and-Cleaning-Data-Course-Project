@@ -23,19 +23,19 @@ The dataset used in this project comes from the accelerometers of the Samsung Ga
 Each row represents a **subject** performing a specific **activity**, with the average of each measurement.
 
 ### **Identifiers:**
-- `subject` - The ID of the participant (1 to 30)
-- `activity` - The name of the performed activity
+- subject - The ID of the participant (1 to 30)
+- activity - The name of the performed activity
 
 ### **Extracted Measurements (Mean & Standard Deviation Only):**
-- `TimeBodyAccelerometer-mean-X`
-- `TimeBodyAccelerometer-mean-Y`
-- `TimeBodyAccelerometer-mean-Z`
-- `TimeBodyAccelerometer-std-X`
-- `TimeBodyAccelerometer-std-Y`
-- `TimeBodyAccelerometer-std-Z`
-- `TimeGravityAccelerometer-mean-X`
-- `TimeGravityAccelerometer-mean-Y`
-- `TimeGravityAccelerometer-mean-Z`
+- TimeBodyAccelerometer-mean-X
+- TimeBodyAccelerometer-mean-Y
+- TimeBodyAccelerometer-mean-Z
+- TimeBodyAccelerometer-std-X
+- TimeBodyAccelerometer-std-Y
+- TimeBodyAccelerometer-std-Z
+- TimeGravityAccelerometer-mean-X
+- TimeGravityAccelerometer-mean-Y
+- TimeGravityAccelerometer-mean-Z
 - ... (Other mean and std measurements from accelerometers & gyroscopes)
 
 > The full dataset contains **66** measurement columns, focusing only on **mean** and **standard deviation** values.
@@ -47,9 +47,9 @@ Each row represents a **subject** performing a specific **activity**, with the a
 - **Extracted** only mean and standard deviation columns using `grep()`.
 - **Used descriptive activity names** from `activity_labels.txt`.
 - **Renamed variables** to be more human-readable:
-  - `tBodyAcc-mean()-X` → `TimeBodyAccelerometer-mean-X`
-  - `fBodyGyro-std()-Y` → `FrequencyBodyGyroscope-std-Y`
-  - `tGravityAcc-std()-Z` → `TimeGravityAccelerometer-std-Z`
+  - tBodyAcc-mean()-X → TimeBodyAccelerometer-mean-X
+  - fBodyGyro-std()-Y → FrequencyBodyGyroscope-std-Y
+  - tGravityAcc-std()-Z → TimeGravityAccelerometer-std-Z
 - **Grouped data** by `subject` and `activity`, then calculated the **average** of each measurement.
 
 ---
