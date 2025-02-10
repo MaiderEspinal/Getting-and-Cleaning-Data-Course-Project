@@ -8,10 +8,10 @@ The **raw data** comes from the [UCI Machine Learning Repository](http://archive
 ## **Repository Contents**  
 This repository contains the following files:  
 
-- `run_analysis.R` → R script to process and clean the dataset  
-- `tidy_data.txt` → Final cleaned dataset  
-- `CodeBook.md` → Describes variables, transformations, and methodology  
-- `README.md` → Instructions on how to run the script  
+- run_analysis.R → R script to process and clean the dataset  
+- tidy_data.txt → Final cleaned dataset  
+- CodeBook.md → Describes variables, transformations, and methodology  
+- README.md → Instructions on how to run the script  
 
 ---
 
